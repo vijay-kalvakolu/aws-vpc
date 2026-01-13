@@ -26,4 +26,4 @@ provider "aws" {
  # Resource 10 : Elastic IP for NAT Gateway (EIP)
  resource "aws_eip" "NAT_EIP" {
   tags = merge(var.tags, {Name = "${var.env_name}-nat-eip"}) 
- }
+ }  

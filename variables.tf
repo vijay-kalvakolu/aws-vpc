@@ -8,3 +8,6 @@ variable "vpc_cidr_block" {
 variable "tags" {
     default = "aws-module-vpc"
 }
+variable "env_name" {
+  default = "dev"
+}
