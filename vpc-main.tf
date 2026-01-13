@@ -9,8 +9,13 @@ provider "aws" {
     enable_dns_support = true
     tags = merge(var.tags, {Name="dev-vpc"})
  }
- 
+
  # Resource 2 : IGW
+ resource "aws_internet_gateway" "main_igw" {
+   vpc_id = aws_vpc.main.id
+   tags = merge(var.tags, {Name="dev-igw"})
+ }
+ 
  # Resource 3 : Public subnet
  # Resource 4: Private Subnet
  # Resource 5 : NAT Gateway
